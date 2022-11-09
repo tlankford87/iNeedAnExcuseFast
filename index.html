@@ -20,21 +20,24 @@
 				<h2 id="excuse"></h2>
 			</section>
 			<section id="buttonRow">
-				
-				<label for="categories">Categories</label>
-				<select name="categories" id="categories" onchange="getChoice()">
-					<option value="random">Random</option>
-					<option value="family">Family</option>
-					<option value="office">Office</option>
-					<option value="children">Children</option>
-					<option value="college">College</option>
-					<option value="party">Party</option>
-					<option value="funny">Funny</option>
-					<option value="unbelievable">Unbelievable</option>
-					<option value="developers">Developers</option>
-					<option value="gaming">Gaming</option>
-				</select>
-				<button class="" role="button">Get Excuse</button>
+				<section id="choices">
+					<label for="categories" id="catLabel">Categories:</label>
+					<select name="categories" id="categories" onchange="getChoice()">
+						<option value="random">Random</option>
+						<option value="family">Family</option>
+						<option value="office">Office</option>
+						<option value="children">Children</option>
+						<option value="college">College</option>
+						<option value="party">Party</option>
+						<option value="funny">Funny</option>
+						<option value="unbelievable">Unbelievable</option>
+						<option value="developers">Developers</option>
+						<option value="gaming">Gaming</option>
+					</select>
+				</section>
+				<section id="button">
+					<button class="" role="button">Get Excuse</button>
+				</section>
 			</section>
 		</main>
 		<script type="text/javascript" src="js/main.js"></script>

@@ -2,8 +2,15 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getChoice(){
-  choice = document.getElementById('categories').value
-  return choice
+  selected = document.getElementById('categories').value
+  choice = `/${selected}`
+
+  if(choice === '/random'){
+    return ''
+  }else{
+    return choice
+  }
+  
 }
 
 
@@ -12,14 +19,7 @@ function getFetch(){
   let choice = getChoice()
   console.log(choice)
   
-
-  if(choice = 'random'){
-    url = `https://excuser.herokuapp.com/v1/excuse`
-  }else if(choice != 'random'){
-    url = `https://excuser.herokuapp.com/v1/excuse/${choice}`
-  }
-  
-  
+    url = `https://excuser.herokuapp.com/v1/excuse${choice}`
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
